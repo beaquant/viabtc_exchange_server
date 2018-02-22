@@ -1,16 +1,16 @@
 # ViaBTC Exchange Server
 
-ViaBTC Exchange Server is a trading backend with high-speed performance, designed for cryptocurrency exchanges. It can support up to 10000 trades every second and real-time user/market data notification though websocket.
+ViaBTC Exchange Server is a trading backend with high-speed performance, designed for cryptocurrency exchanges. It can support up to 10000 trades every second and real-time user/market data notification through websocket.
 
 ## Architecture
 
-![Architecture](https://user-images.githubusercontent.com/1209350/30948274-4e463044-a441-11e7-881b-b50ab903ed65.jpg)
+![Architecture](https://user-images.githubusercontent.com/1209350/32476113-5ffc622a-c3b0-11e7-9755-924f17bcc167.jpeg)
 
 For this project, it is marked as Server in this picture.
 
-## code structure
+## Code structure
 
-**Require system**
+**Required systems**
 
 * MySQL: For saving operation log, user balance history, order history and trade history.
 
@@ -40,7 +40,7 @@ For this project, it is marked as Server in this picture.
 
 ## Compile and Install
 
-**operating system**
+**Operating system**
 
 Ubuntu 14.04 or Ubuntu 16.04. Not yet tested on other systems.
 
@@ -50,13 +50,13 @@ See [requirements](https://github.com/viabtc/viabtc_exchange_server/wiki/require
 
 You MUST use the depends/hiredis to install the hiredis library. Or it may not be compatible.
 
-**Compile order**
+**Compilation**
 
 Compile network and utils first. The rest all are independent.
 
-**Deploy**
+**Deployment**
 
-One signal instance is given for matchengine, marketprice and alertcenter, while readhistory, accesshttp and accwsswshave multi instance works with loadbalance.
+One single instance is given for matchengine, marketprice and alertcenter, while readhistory, accesshttp and accwssws can have multiple instances to work with loadbalancing.
 
 Please do not install every instance on the same machine.
 
@@ -79,7 +79,9 @@ matchengine
 
 ## API
 
-[HTTP Protocl](https://github.com/viabtc/viabtc_exchange_server/wiki/HTTP-Protocol) and [Websocket Protocl](https://github.com/viabtc/viabtc_exchange_server/wiki/WebSocket-Protocol) documents are available in Chinese. Should time permit, we will have it translated into English in the future.
+[HTTP Protocol](https://github.com/viabtc/viabtc_exchange_server/wiki/HTTP-Protocol) and [Websocket Protocol](https://github.com/viabtc/viabtc_exchange_server/wiki/WebSocket-Protocol) documents are available in Chinese. Should time permit, we will have it translated into English in the future.</br>
+[Python3 API realisation](https://github.com/grumpydevelop/viabtc_exchange_server_tools/blob/master/api/api_exchange.py)
+
 
 ## Websocket authorization
 
